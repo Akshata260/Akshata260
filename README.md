@@ -45,13 +45,13 @@ while True:
     # of random module
     comp_option = random.randint(a, c)
 
-    # looping until comp_choice value
-    # is equal to the choice value
+    # looping until comp_option value
+    # is equal to the option value
     while comp_option == option:
         comp_option = random.randint(a, c)
 
-    # initialize value of comp_choice_name
-    # variable corresponding to the choice value
+    # initialize value of comp_option_name
+    # variable corresponding to the option value
     if comp_option == a:
         comp_option_name = 'rocK'
     elif comp_option == b:
@@ -68,7 +68,7 @@ while True:
     # condition for winning
     if(option == a and comp_option == b):
         print('paper wins =>', end="")
-        result = 'papeR'
+        result = 'paper'
     elif (option == b and comp_option == a):
         print('paper wins =>', end="")
         result = 'Paper'
@@ -78,7 +78,7 @@ while True:
         result = 'Rock'
     elif (option == c and comp_option == a):
         print('Rock wins =>\n', end="")
-        result = 'rocK'
+        result = 'rock'
 
     if (option == b and comp_option == c):
         print('Scissors wins =>', end="")
