@@ -13,7 +13,7 @@ print('Winning rules of the game ROCK PAPER SCISSORS are :\n'
 
 while True:
 
- print("Enter your option \n 1 - Rock \n 2 - Paper \n 3 - Scissors \n")
+ print("Enter your option \n a - Rock \n b - Paper \n c - Scissors \n")
 
     # take the input from user
 
@@ -24,14 +24,14 @@ while True:
     # then return it True value
 
     # looping until user enter invalid input
-    while option > 3 or option < 1:
+    while option > c or option < a:
         option = int(input('Enter a valid option please ☺'))
 
         # initialize value of option_name variable
     # corresponding to the option value
-    if option == 1:
+    if option == a:
         option_name = 'Rock'
-    elif option == 2:
+    elif option == b:
         option_name = 'Paper'
     else:
         option_name = 'Scissors'
@@ -41,21 +41,21 @@ while True:
     print('Now its Computers Turn....')
 
     # Computer chooses randomly any number
-    # among 1 , 2 and 3. Using randint method
+    # among a , b and c. Using randint method
     # of random module
-    comp_option = random.randint(1, 3)
+    comp_option = random.randint(a, c)
 
     # looping until comp_choice value
     # is equal to the choice value
     while comp_option == option:
-        comp_option = random.randint(1, 3)
+        comp_option = random.randint(a, c)
 
     # initialize value of comp_choice_name
     # variable corresponding to the choice value
-    if comp_option == 1:
+    if comp_option == a:
         comp_option_name = 'rocK'
-    elif comp_option == 2:
-        comp_option_name = 'papeR'
+    elif comp_option == b:
+        comp_option_name = 'paper'
     else:
         comp_option_name = 'scissor'
     print("Computer option is \n", comp_option_name)
@@ -66,24 +66,24 @@ while True:
         result = "DRAW"
 
     # condition for winning
-    if(option == 1 and comp_option == 2):
+    if(option == a and comp_option == b):
         print('paper wins =>', end="")
         result = 'papeR'
-    elif (option == 2 and comp_option == 1):
+    elif (option == b and comp_option == a):
         print('paper wins =>', end="")
         result = 'Paper'
 
-    if (option == 1 and comp_option == 3):
+    if (option == a and comp_option == c):
         print('Rock wins =>\n', end="")
         result = 'Rock'
-    elif (option == 3 and comp_option == 1):
+    elif (option == c and comp_option == a):
         print('Rock wins =>\n', end="")
         result = 'rocK'
 
-    if (option == 2 and comp_option == 3):
+    if (option == b and comp_option == c):
         print('Scissors wins =>', end="")
         result = 'scissoR'
-    elif (option == 3 and comp_option == 2):
+    elif (option == c and comp_option == b):
         print('Scissors wins =>', end="")
         result = 'Rock'
 
